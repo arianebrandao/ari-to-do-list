@@ -1,16 +1,27 @@
-export function TaskList() {
-  return (
-    <div className="gap-3 p-4 border bg-gray-500 border-gray-400 rounded-lg justify-start items-start inline-flex">
-      <input
-        type="checkbox"
-        className="form-checkbox rounded-full text-purple-dark hover:text-purple bg-transparent ring-transparent outline-none border-blue hover:border-blue-dark border-2 focus:ring-transparent focus:ring-offset-transparent"
-      />
+import { MouseEvent, useEffect, useState } from 'react'
+import { TasksListProps } from '../App'
 
-      <p className="text-gray-100 text-sm leading-14">
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer.
-      </p>
+export function TasksList({ task }: TasksListProps) {
+  const isParagraphChecked = task.isChecked ? 'line-through' : ''
+  return (
+    <div
+      key={task.id}
+      className="gap-3 p-4 border bg-gray-500 border-gray-400 rounded-lg justify-between items-start inline-flex"
+    >
+      <div className="inline-flex gap-3">
+        <input
+          onClick={(event) =>
+            handleTaskToggle(event as MouseEvent<HTMLInputElement>, task.id)
+          }
+          type="checkbox"
+          className="form-checkbox rounded-full text-purple-dark hover:text-purple bg-transparent ring-transparent outline-none border-blue hover:border-blue-dark border-2 focus:ring-transparent focus:ring-offset-transparent"
+        />
+        <p className={`${isParagraphChecked} text-gray-100 text-sm leading-14`}>
+          {task.content}
+        </p>
+      </div>
       <svg
+        onClick={() => handleDeleteTask(task.id)}
         className="w-7 h-7 hover:rounded hover:bg-gray-400 p-1 hover:stroke-danger hover:cursor-pointer flex-none "
         viewBox="0 0 24 24"
         fill="none"
