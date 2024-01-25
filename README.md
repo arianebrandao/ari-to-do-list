@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <img alt="Ari To Do List" title="Ari To Do List" src=".github/logo.png" />
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img alt="Ari To Do List" src=".github/app.png" width="100%">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Ari - To Do List
 
-## Expanding the ESLint configuration
+Aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Adicionar uma nova tarefa
+- Marcar e desmarcar uma tarefa como concluída
+- Remover uma tarefa da listagem
+- Mostrar o progresso de conclusão das tarefas
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 Projeto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Essa é uma aplicação React utilizando TypeScript, Vite e Tailwind CSS para aprender sobre os conceitos importantes de React:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Estados
+- Imutabilidade do estado
+- Listas e chaves no ReactJS
+- Propriedades
+- Componentização
+
+## App online para testar
+
+App online: [https://ari-to-do-list.pages.dev/](https://ari-to-do-list.pages.dev/).
+
+## Layout
+
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
+
+## Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+### Como executar
+
+- Clone o repositório
+- Rode a aplicação com `pnpm run dev`
+
+Agora você pode acessar o link gerado pelo Vite no navegador.
+
+## Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
