@@ -17,8 +17,17 @@ export interface TasksListProps {
   task: TaskProps
 }
 
+const tasksDefault = [
+  {
+    id: 1,
+    content:
+      'Internacionalização: adicionar suporte para outros idiomas no app',
+    isChecked: false,
+  },
+]
+
 export function App() {
-  const [taskList, setTaskList] = useState<TaskProps[]>([])
+  const [taskList, setTaskList] = useState<TaskProps[]>(tasksDefault)
   const [newTaskText, setNewTaskText] = useState('')
   const [totalOfTasks, setTotalOfTasks] = useState(0)
 
