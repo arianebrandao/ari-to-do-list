@@ -115,6 +115,7 @@ export function App() {
                 >
                   <div className="inline-flex gap-3">
                     <Checkbox
+                      defaultChecked={task.isChecked}
                       onClick={(event) =>
                         handleTaskToggle(
                           event as MouseEvent<HTMLInputElement>,
